@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { rnNm } from "../utility/fns";
 
+// Задаем изначальные значения, чтобы IDE давал подсказки;
 const Context = React.createContext({
   time: "",
   backgroundColor: "",

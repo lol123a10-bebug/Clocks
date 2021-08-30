@@ -1,5 +1,4 @@
 import { Route, Switch } from "react-router-dom";
-import "./App.css";
 import Hall from "./Pages/Hall";
 import Home from "./Pages/Home";
 import Header from "./components/Layout/Header";
