@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { rnNm } from "../utility/fns";
 
 const Context = React.createContext({
   time: "",
-  second: null,
+  backgroundColor: "",
 });
 
 export const ContextProvider = (props) => {
@@ -27,9 +28,18 @@ export const ContextProvider = (props) => {
     return () => clearInterval(timer);
   }, []);
 
+  const [bg, setBg] = useState("");
+
+  // Проврека деления 4 без остатка;
+  useEffect(() => {
+    if (s % 4 === 0) {
+      setBg(`rgb(${rnNm(0, 255)}, ${rnNm(0, 255)}, ${rnNm(0, 255)})`);
+    }
+  }, [s]);
+
   const contextValues = {
     time: `${hh}:${mm}:${ss}`,
-    second: s,
+    backgroundColor: bg,
   };
 
   return (
