@@ -24,8 +24,6 @@ export const ContextProvider = (props) => {
     return () => clearInterval(timer);
   }, []);
 
-  console.log(s);
-
   const contextValues = {
     time: `${hh}:${mm}:${ss}`,
     second: s,

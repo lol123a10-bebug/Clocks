@@ -1,8 +1,9 @@
 import Clocks from "./Clocks";
+import classes from "./Home.module.scss";
 
 const Home = () => {
   return (
-    <div>
+    <div className={classes.Home}>
       <Clocks />
     </div>
   );

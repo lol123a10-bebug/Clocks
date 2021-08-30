@@ -3,7 +3,7 @@ import Context from "../store/context";
 
 const Clocks = () => {
   const ctx = useContext(Context);
-
+  
   return <>{ctx.time}</>;
 };
 
