@@ -1,4 +1,4 @@
-import Clocks from "./Clocks";
+import Clocks from "../components/Clocks";
 import classes from "./Home.module.scss";
 
 const Home = () => {

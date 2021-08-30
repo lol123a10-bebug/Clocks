@@ -7,6 +7,8 @@ const Context = React.createContext({
 
 export const ContextProvider = (props) => {
   const [date, setDate] = useState(new Date());
+
+  // Конвертируем формат h:m:s в hh:mm:ss;
   const h = date.getHours();
   const hh = h < 10 ? "0" + h : h;
 
@@ -16,6 +18,7 @@ export const ContextProvider = (props) => {
   const s = date.getSeconds();
   const ss = s < 10 ? "0" + s : s;
 
+  // Запуск часов;
   useEffect(() => {
     const timer = setInterval(() => {
       setDate(new Date());
